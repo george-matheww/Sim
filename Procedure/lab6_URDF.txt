@@ -1,14 +1,22 @@
-0. cd
-1. mkdir test_ws
-2. cd test_ws
-3. mkdir src
-4. catkin_make
-5. cd src
-6. catkin_create_pkg my_robot std_msgs rospy roscpp
-7. cd my_robot
-8. cd src
-9
-9. mkdir launch
-10. mkdir urdf
-11. Add explorer_bot.urdf to urdf and rviz_explorer_bot.launch to launch
-12. roslaunch explorer_bot rviz_explorer_bot.launch
+For URDF unique:
+Download slam_ws
+cd slam_ws
+delete devel and build
+catkin_make
+
+cd 
+nano ~/.bashrc
+source ~/slam_ws/devel/setup.bash
+
+
+cd slam_ws/src
+catkin_create_pkg my_robot std_msgs rospy
+cd my_robot
+cd src
+mkdir urdf 
+mkdir launch
+add explorer_bot.urdf to urdf and rviz_explorer_bot.launch to launch
+
+roscore
+
+roslaunch myrobot rviz_explorer_bot.launch

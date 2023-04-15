@@ -1,0 +1,24 @@
+URDF: For slam_ws
+
+copy slam_ws to home
+delete build and devel
+cd slam_ws 
+catkin_make
+open the urdf file in vscode
+ctrl+Shift+p and type ros preview urdf
+Comment inertia,collision and gazebo tags
+
+
+roscore
+cd
+nano ~/.bashrc
+source ~/slam_ws/devel/setup.bash
+
+open new terminal
+cd slam_ws
+roslaunch explorer_bot rviz_explorer_bot.launch
+
+open another terminal 
+
+change fixed frame to base_link
+add robot model
