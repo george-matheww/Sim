@@ -1,0 +1,14 @@
+Server and client:
+cd scripts
+touch server.py
+chmod +x server.py
+nano server.py
+touch client.py
+chmod +x client.py
+nano client.py
+
+roscore
+
+python3 server.py
+
+python3 slient.py

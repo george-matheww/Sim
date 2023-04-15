@@ -1,0 +1,12 @@
+Setting up Turtlesim:
+sudo apt-get install ros-noetic-turtlesim
+rosrun turtlesim turtlesim_node
+rosrun turtle_teleop_key
+
+cd scripts
+cd turtle.py
+roscore
+
+rosrun turtlesim turtlesim_node
+
+python3 turtle.py __<-number for entry

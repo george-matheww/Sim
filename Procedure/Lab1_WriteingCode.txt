@@ -1,0 +1,16 @@
+Creating a code and executing it:
+cd scripts
+touch my_first_node.py
+chmod +x my_first_node.py
+nano +x my_first_node.py
+
+Now run roscore in a new terminal
+python3 my_first_node.py
+or
+From home:
+rosrun my_robot_tutorials my_first_node.py
+
+
+
+RQT
+rosrun rqt_graph rqt_graph

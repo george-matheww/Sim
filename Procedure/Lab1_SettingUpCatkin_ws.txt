@@ -1,0 +1,35 @@
+Lab1: Setting up Catkin_ws
+
+home>>> mkdir catkin_ws
+cd catkin_ws
+mkdir src
+catkin_make
+
+cd src
+ls check Cmakelists.txt
+cd
+cd catkin_ws
+cd devel
+source setup.bash
+nano ~/.bashrc
+at bottom of the code
+source ~/catkin_ws/devel/setup.bash
+
+Pt2: Setting us a ROS Package
+cd ..
+cd src
+
+catkin_create_pkg my_robot_tutorials roscpp rospy std_msgs
+cd my_robot_tutorials
+ls check the contents
+
+cd
+cd catkin_ws
+catkin_make
+cd src
+cd my_robot_tutorials
+mkdir scripts
+
+cd scripts
+
+Do a catkin_make after creating a ros package everytime

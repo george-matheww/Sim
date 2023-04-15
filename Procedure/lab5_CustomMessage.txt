@@ -1,0 +1,72 @@
+Custom mEssage:
+cd catkin_ws/src
+catkin_create_pkg my_robot_msgs roscpp rospy std_msgs
+cd my_robot_msgs
+Remove include and src folder
+
+open Package.xml
+add:
+<build_depend>message_generation</build_generation>
+<exec_depend>message_runtime</exec_depend>
+
+open CMakeLists.txt
+add:
+##FIND catkin macros and libraries
+##if ....
+message_generation
+
+#Generate added message and services with any dependencies listed here
+uncomment
+
+##DEPENDS: system dependencies of this pro
+catkin_package(
+#INCLUDE
+#LIBRARIES
+uncomment CATKIN_DEPENDS roscpp rospy std_msgs
+#DEPENDS system_lib
+
+
+mkdir msg
+cd msg
+touch HardwareStatus.msg
+touch Message1.msg
+touch Message2.msg
+nano HardwareStatus.msg
+int64 temperature
+bool are_motors_up
+string debug_message
+
+open CMakeLists.txt
+Uncomment
+##Generate messages in the msg folder
+
+add_message_files(
+  FILES
+  Message1.msg
+  Message2.msg
+)
+
+add_message_files(
+  FILES
+  HardwareStatus.msg
+)
+
+cd
+cd catkin_ws
+catkin_make
+cd src/my_robot_tutorials 
+nano package.xml
+add:
+<depend>my_robot_msgs</depend>
+
+open CMakeLists.txt
+Add my_robot_msgs in the Find package section
+
+
+cd scripts
+touch hw_status_pub.py
+chmod +x hw_status_pub.py
+
+make sub too
+
+Run
