@@ -19,4 +19,4 @@ add explorer_bot.urdf to urdf and rviz_explorer_bot.launch to launch
 
 roscore
 
-roslaunch myrobot rviz_explorer_bot.launch
+roslaunch my_robot rviz_explorer_bot.launch
